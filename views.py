@@ -150,10 +150,10 @@ class APICreaateDockerImage(APIView):
 
             if data:
                 try:
-                    # ConvertToBASE64(apps_json_file_path, "APPS_JSON_BASE64")
+                    ConvertToBASE64(apps_json_file_path, "APPS_JSON_BASE64")
                     DockerBuild("APPS_JSON_BASE64", container_file_path, "karanwebisoft/uctest:1.0.0")
-                    # LoginToDocker("karanwebisoft", "dckr_pat_eYQUrthdbh3Zd75oCYybYvzh6sY")
-                    # PushImageToDocker("karanwebisoft/uctest:1.0.0")
+                    LoginToDocker("karanwebisoft", "dckr_pat_eYQUrthdbh3Zd75oCYybYvzh6sY")
+                    PushImageToDocker("karanwebisoft/uctest:1.0.0")
 
                     result = f"Image Is Successfully Pushed"
 
